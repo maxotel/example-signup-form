@@ -1,4 +1,4 @@
-<?
+<?php
 
 //Whitelabel Basic Signup Page.
 ini_set("display_errors","off");
@@ -491,7 +491,7 @@ function showhide() {
   <tr class="r1c2"> 
     <td>Street Type:</td>
     <td> <select name="ipnd_service_street_type_1" id="ipnd_service_street_type_1">
-        <? echo $default_streets; ?> </select> </td>
+        <?=$default_streets;?> </select> </td>
   </tr>
   <tr class="r1c1"> 
     <td>Street Suffix:</td>
@@ -547,7 +547,7 @@ function showhide() {
       <td>Plan:</td>
       <td><select name="selectbusplan" id="selectbusplan">
           <option value="0" selected>Choose a plan!</option>
-          <? echo $busplans; ?> </select> </td>
+          <?=$busplans;?> </select> </td>
     </tr>
   </tbody>
  
@@ -568,7 +568,7 @@ function showhide() {
       <td><select name="creditcard_type">
           <option>Visa</option>
           <option>MasterCard</option>
-		  <?php if ($setup["cc_accept_amex"] == 1) { ?><option>American Express</option> <?php } ?>
+		  <?php if ($setup["cc_accept_amex"] == 1) { ?><option>American Express</option> <?php }; ?>
         </select></td>
     </tr>
     <tr class="r1c1"> 
@@ -587,7 +587,7 @@ function showhide() {
           <option>11</option>
           <option>12</option>
         </select> 
-		<?
+		<?php
 		$yearExpires = "<select id='creditcard_year' name='creditcard_year'>";
 				$selectyear = $currentyear = date("Y");
 				while ($currentyear <= (date("Y")+10)) {

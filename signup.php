@@ -7,7 +7,6 @@ ini_set("display_errors","off");
 $setup["username"] = "Example_Username";
 $setup["API_KEY"] = "API_KEY_PROVIDED_BY_MAXO";
 $setup["strict"] = 1; //Allow incomplete information and minor errors
-$setup["cc_accept_amex"] = 1; //Accept AMEX cards?
 $setup["success_URL"] = "http://voipportal.com.au/success";
 $setup["API_BASE_URL"] = "https://api.maxo.com.au/wla/?user=".$setup["username"]."&key=".$setup["API_KEY"];
 $setup['plan_list_cache_file'] = 'cache_plans.txt'; //File used to keep a local cache of the plan list
@@ -568,7 +567,7 @@ function showhide() {
       <td><select name="creditcard_type">
           <option>Visa</option>
           <option>MasterCard</option>
-		  <?php if ($setup["cc_accept_amex"] == 1) { ?><option>American Express</option> <?php }; ?>
+		  <option>American Express</option>
         </select></td>
     </tr>
     <tr class="r1c1"> 

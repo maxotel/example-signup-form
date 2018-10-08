@@ -65,7 +65,6 @@ if ($_REQUEST["form_submitted"]) {
 	$account_autotopup_at = (substr($_REQUEST["account_autotopup_at"], 0, 10)>0 && substr($_REQUEST["account_autotopup_at"], 0, 10)<500?substr($_REQUEST["account_autotopup_at"], 0, 10):10); //default Auto Topup
 	
 	$sb = array(
-	"confirm"                               => $setup["confirm"],
 	"strict"                                => $setup["strict"],
 	"sendemail"                             => $setup["sendemail"],
 	"sendsms"                               => $setup["sendsms"],
